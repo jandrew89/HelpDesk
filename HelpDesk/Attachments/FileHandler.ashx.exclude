@@ -1,0 +1,35 @@
+﻿<%@ WebHandler Language="C#" Class="FileHandler" %>
+
+using System.IO;
+using System.Web;
+
+public class FileHandler : IHttpHandler {
+
+    public void ProcessRequest(HttpContext context)
+    {
+        string path = context.Request["filepath"];
+        path = path.Replace("*", "/");
+        //context.Response.Write(path);
+        //context.Response.End();
+        
+        int chunk = context.Request["chunk"] != null ? int.Parse(context.Request["chunk"]) : 0;
+        string fileName = context.Request["name"] != null ? context.Request["name"] : string.Empty;
+        HttpPostedFile fileUpload = context.Request.Files[0];
+        string uploadPath = @"//" + path; //fewebdev/c$/inetpub/wwwroot/support/attachments_support/files/"; // context.Server.MapPath("/support/tmpAttachmentFiles");
+        using (FileStream fs = new FileStream(Path.Combine(uploadPath, fileName), chunk == 0 ? FileMode.Create : FileMode.Append))
+        {
+            byte[] buffer = new byte[fileUpload.InputStream.Length];
+            fileUpload.InputStream.Read(buffer, 0, buffer.Length); fs.Write(buffer, 0, buffer.Length);
+        }
+        fileUpload.InputStream.Dispose();
+        //context.Response.ContentType = "text/plain";
+        //context.Response.Write("Success");
+    }
+ 
+    public bool IsReusable {
+        get {
+            return false;
+        }
+    }
+
+}

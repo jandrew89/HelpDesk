@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C43724A-55E1-4AD7-B1E2-CC45A27C5D8A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelpDesk</RootNamespace>
+    <AssemblyName>HelpDesk</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\packages\Ajax4.5\lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_AD">
+      <HintPath>..\..\..\Library\CWF_AD\bin\Debug\CWF_AD.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_Common">
+      <HintPath>..\..\..\Library\CWF_Common\bin\Debug\CWF_Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_Corporate">
+      <HintPath>..\..\..\Library\CWF_Corporate\bin\Debug\CWF_Corporate.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_Exchange">
+      <HintPath>..\..\..\Library\CWF_Exchange\CWF_Exchange\bin\Debug\CWF_Exchange.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_HelpDesk">
+      <HintPath>..\..\..\Library\CWF_HelpDesk\bin\Debug\CWF_HelpDesk.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_Security">
+      <HintPath>..\..\..\Library\CWF_Security\bin\Debug\CWF_Security.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_SQLCookies">
+      <HintPath>..\..\..\Library\CWF_SQLCookies\bin\Debug\CWF_SQLCookies.dll</HintPath>
+    </Reference>
+    <Reference Include="CWF_WorkflowRouting">
+      <HintPath>..\..\..\Library\CWF_WorkflowRouting\bin\Debug\CWF_WorkflowRouting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddAttachment.aspx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="admin\Departments.aspx" />
+    <Content Include="admin\Equipment.aspx" />
+    <Content Include="admin\GetUser.aspx" />
+    <Content Include="admin\Maintenance.aspx" />
+    <Content Include="admin\ReplaceUser.aspx" />
+    <Content Include="admin\Sites.aspx" />
+    <Content Include="admin\users.aspx" />
+    <Content Include="Attachments\CreateFile.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="CSS\osx2_1.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="default.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\Add16.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\AttachmentHS.png" />
+    <Content Include="images\book_closed.gif" />
+    <Content Include="images\bulletlist.gif" />
+    <Content Include="images\Calendar16.png" />
+    <Content Include="images\Cancel16.png" />
+    <Content Include="images\Chart16.png" />
+    <Content Include="images\ChartPie16.png" />
+    <Content Include="images\DataContainer_MoveFirstHS.png" />
+    <Content Include="images\DataContainer_MoveLastHS.png" />
+    <Content Include="images\DataContainer_MoveNextHS.png" />
+    <Content Include="images\DataContainer_MovePreviousHS.png" />
+    <Content Include="images\Delete16.png" />
+    <Content Include="images\Edit16.png" />
+    <Content Include="images\EditTableHS.png" />
+    <Content Include="images\excel.gif" />
+    <Content Include="images\Exclamation16.png" />
+    <Content Include="images\Folder %28Adorner in front%29 OK16.png" />
+    <Content Include="images\Folder %28Adorner in front%29 Remove16.png" />
+    <Content Include="images\GoRtlHS.png" />
+    <Content Include="images\gradient_bg.gif" />
+    <Content Include="images\Group of Users16.png" />
+    <Content Include="images\Help16.png" />
+    <Content Include="images\ig_menuSep.gif" />
+    <Content Include="images\List_BulletsHS.png" />
+    <Content Include="images\List_NumberedHS.png" />
+    <Content Include="images\Make Favorite16.png" />
+    <Content Include="images\Move Down %28Arrow%2916.png" />
+    <Content Include="images\Move Up %28Arrow%2916.png" />
+    <Content Include="images\NavForward.png" />
+    <Content Include="images\New Add16.png" />
+    <Content Include="images\New Edit16.png" />
+    <Content Include="images\New Locked %28Yellow%2916.png" />
+    <Content Include="images\New Remove16.png" />
+    <Content Include="images\New16.png" />
+    <Content Include="images\pixel_trans.gif" />
+    <Content Include="images\portal_heading_bg.gif" />
+    <Content Include="images\prev_btn_16.png" />
+    <Content Include="images\Print Preview16.png" />
+    <Content Include="images\Printer User16.png" />
+    <Content Include="images\Printer16.png" />
+    <Content Include="images\processing.gif" />
+    <Content Include="images\PROP.GIF" />
+    <Content Include="images\Refresh16.png" />
+    <Content Include="images\RepeatHS.png" />
+    <Content Include="images\Save Add16.png" />
+    <Content Include="images\Save16.png" />
+    <Content Include="images\Search16.png" />
+    <Content Include="images\Security16.png" />
+    <Content Include="images\Send %28Email%29 Forward16.png" />
+    <Content Include="images\Send %28Email%2916.png" />
+    <Content Include="images\Settings Edit16.png" />
+    <Content Include="images\Settings16.png" />
+    <Content Include="images\tool-copy.gif" />
+    <Content Include="images\tool-preview.gif" />
+    <Content Include="images\Undo16.png" />
+    <Content Include="images\uploading.gif" />
+    <Content Include="images\User Add16.png" />
+    <Content Include="images\vert_div.gif" />
+    <Content Include="images\WindowSplitHorizontal16.png" />
+    <Content Include="images\WindowSplitVertical16.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CWF\common.js" />
+    <Content Include="jscript\overlib.js" />
+    <Content Include="Login\default.aspx" />
+    <Content Include="mainForm.aspx" />
+    <Content Include="obj\Debug\MaintHelpDesk.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MaintHelpDesk.dll" />
+    <Content Include="obj\Debug\MaintHelpDesk.pdb" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.3.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="Workflow\FindUser.aspx" />
+    <Content Include="Workflow\FindUserResults.aspx" />
+    <Content Include="Workflow\images\Add16.png" />
+    <Content Include="Workflow\images\ajax-loader.gif" />
+    <Content Include="Workflow\images\Delete16.png" />
+    <Content Include="Workflow\images\Edit16.png" />
+    <Content Include="Workflow\images\ig_menuSep.gif" />
+    <Content Include="Workflow\images\L_bracket.gif" />
+    <Content Include="Workflow\images\Move Down %28Arrow%2916.png" />
+    <Content Include="Workflow\images\Move Up %28Arrow%2916.png" />
+    <Content Include="Workflow\images\pixel_trans.gif" />
+    <Content Include="Workflow\images\PROP.GIF" />
+    <Content Include="Workflow\images\Refresh16.png" />
+    <Content Include="Workflow\images\Send %28Email%2916.png" />
+    <Content Include="Workflow\images\Settings16.png" />
+    <Content Include="Workflow\images\tool-preview.gif" />
+    <Content Include="Workflow\InsertStep.aspx" />
+    <Content Include="Workflow\ModifyUsers.aspx" />
+    <Content Include="Workflow\WF_Manager.aspx" />
+    <Content Include="Workflow\WF_Report.aspx" />
+    <Content Include="Workflow\WorkflowSteps2.ascx" />
+    <Content Include="MasterPages\Tools.master" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\MaintHelpDesk.csprojResolveAssemblyReference.cache" />
+    <Content Include="Attachments\FileHandler.ashx.exclude" />
+    <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SearchResults.aspx" />
+    <Content Include="SearchResultsSettings.aspx" />
+    <Content Include="SignOff.aspx" />
+    <Content Include="SignOff_AssignedTo.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAttachment.aspx.cs">
+      <DependentUpon>AddAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddAttachment.aspx.designer.cs">
+      <DependentUpon>AddAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Departments.aspx.cs">
+      <DependentUpon>Departments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Departments.aspx.designer.cs">
+      <DependentUpon>Departments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Equipment.aspx.cs">
+      <DependentUpon>Equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Equipment.aspx.designer.cs">
+      <DependentUpon>Equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GetUser.aspx.cs">
+      <DependentUpon>GetUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GetUser.aspx.designer.cs">
+      <DependentUpon>GetUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Maintenance.aspx.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Maintenance.aspx.designer.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ReplaceUser.aspx.cs">
+      <DependentUpon>ReplaceUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ReplaceUser.aspx.designer.cs">
+      <DependentUpon>ReplaceUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Sites.aspx.cs">
+      <DependentUpon>Sites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Sites.aspx.designer.cs">
+      <DependentUpon>Sites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attachments\CreateFile.aspx.cs">
+      <DependentUpon>CreateFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attachments\CreateFile.aspx.designer.cs">
+      <DependentUpon>CreateFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Attachments.cs" />
+    <Compile Include="Classes\BaseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Columns.cs" />
+    <Compile Include="Classes\Common.cs" />
+    <Compile Include="Classes\CustomHTMLEditor.cs" />
+    <Compile Include="Classes\DataColumns.cs" />
+    <Compile Include="Classes\FE_PopUpMenu.cs" />
+    <Compile Include="Classes\GetUserNames.cs" />
+    <Compile Include="Classes\GridArguments.cs" />
+    <Compile Include="Classes\GridViewExport.cs" />
+    <Compile Include="Classes\myClientScript.cs" />
+    <Compile Include="Classes\MyTree.cs" />
+    <Compile Include="Classes\PopUpToolbar.cs" />
+    <Compile Include="Classes\SearchColumns.cs" />
+    <Compile Include="Classes\TableExport.cs" />
+    <Compile Include="Classes\WF_PopUpMenu.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.aspx.cs">
+      <DependentUpon>mainForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mainForm.aspx.designer.cs">
+      <DependentUpon>mainForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Tools.master.cs">
+      <DependentUpon>Tools.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Tools.master.designer.cs">
+      <DependentUpon>Tools.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResultsSettings.aspx.cs">
+      <DependentUpon>SearchResultsSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResultsSettings.aspx.designer.cs">
+      <DependentUpon>SearchResultsSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOff.aspx.cs">
+      <DependentUpon>SignOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOff.aspx.designer.cs">
+      <DependentUpon>SignOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOff_AssignedTo.aspx.cs">
+      <DependentUpon>SignOff_AssignedTo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOff_AssignedTo.aspx.designer.cs">
+      <DependentUpon>SignOff_AssignedTo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\BaseClass_WF.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\FindUser.aspx.cs">
+      <DependentUpon>FindUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\FindUser.aspx.designer.cs">
+      <DependentUpon>FindUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\FindUserResults.aspx.cs">
+      <DependentUpon>FindUserResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\FindUserResults.aspx.designer.cs">
+      <DependentUpon>FindUserResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\InsertStep.aspx.cs">
+      <DependentUpon>InsertStep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\InsertStep.aspx.designer.cs">
+      <DependentUpon>InsertStep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\ModifyUsers.aspx.cs">
+      <DependentUpon>ModifyUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\ModifyUsers.aspx.designer.cs">
+      <DependentUpon>ModifyUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\WF_Manager.aspx.cs">
+      <DependentUpon>WF_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\WF_Manager.aspx.designer.cs">
+      <DependentUpon>WF_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\WF_Report.aspx.cs">
+      <DependentUpon>WF_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\WF_Report.aspx.designer.cs">
+      <DependentUpon>WF_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\WorkflowSteps2.ascx.cs">
+      <DependentUpon>WorkflowSteps2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\WorkflowSteps2.ascx.designer.cs">
+      <DependentUpon>WorkflowSteps2.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59615</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59615/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
